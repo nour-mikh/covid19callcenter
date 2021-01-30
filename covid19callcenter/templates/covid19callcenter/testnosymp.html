@@ -1,0 +1,17 @@
+{% extends "covid19callcenter/layout.html" %}
+
+{% block body %}
+    <p>Is the patient experiencing life threatening symptoms?</p>
+
+    <form action = "nosymp" method="POST">
+        {% csrf_token %}
+        <input type = "radio" name = "yes" value = "yes">
+        <label for = "yes"> Yes </label> 
+
+        <input type = "radio" name = "no" value = "no">
+        <label for = "no"> No </label><br>
+
+        <input type = "submit" >
+    </form>
+        
+{% endblock %}

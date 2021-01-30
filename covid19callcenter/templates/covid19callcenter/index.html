@@ -1,0 +1,43 @@
+{% extends "covid19callcenter/layout.html" %}
+
+{% block body %}
+<h1>Welcome to Champville call center</h1>
+<h3>Thank you for calling
+    Champville call center. My
+    name is BOT123 and I am a
+    smart automated algorithm. I'll be really happy to help you today. </h3>
+
+<p> Before we start, you need to fill this form with information concerning the caller</p>
+
+<form action = "behalf" method = "POST">
+
+    {% csrf_token %}
+
+    <label>First Name</label>
+    <input type = "text" name = "firstName"> <br>
+
+    <label>Last Name</label>
+    <input type = "text" name = "lastName"> <br>
+
+    <label>Age</label>
+    <input type = "number" name = "age"> <br>
+
+    <label>Phone Number</label>
+    <input type = "tel" name = "phone"> <br>
+
+    <label>Gender</label>
+    <input type = "text" name = "gender"> <br>
+
+    <label>Address</label>
+    <input type = "text" name = "address"> <br>
+    
+    <h3>Are you calling on behalf of someone?</h3>
+    <input type = "radio" name = "yes" value = "yes">
+    <label for = "yes"> Yes </label>
+
+    <input type = "radio" name = "no" value = "no">
+    <label for = "no"> No </label> <br>
+
+    <input type = "submit" >
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "covid19callcenter/layout.html" %}
+
+{% block body %}
+    <h2>Are you experiencing any symptoms?</h2>
+
+    <form action = "common" method="POST">
+        {% csrf_token %}
+        <input type = "radio" name = "yes" value = "yes">
+        <label for = "common"> Common </label> <br>
+
+        <input type = "radio" name = "no" value = "no">
+        <label for = "no"> No or Uncommon </label>
+
+        <input type = "submit" >
+    </form>
+        
+{% endblock %}

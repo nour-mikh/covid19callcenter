@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #5dc1c8;
+    align-items: center;
+    margin: 5em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    align-items: center;
+}
+
+#record-symp{
+    width: 15em;
+    height: 8em;
+}

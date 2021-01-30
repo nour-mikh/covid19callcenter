@@ -1,0 +1,13 @@
+{% extends "covid19callcenter/layout.html" %}
+
+{% block body %}
+    <h2>Record symptoms here</h2>
+
+    <form action = "record" method="POST">
+        {% csrf_token %}
+        <input type = "text" id = "record-symp" name = "symptoms"> <br> <br>
+
+        <input type = "submit" >
+    </form>
+        <p> Please get tested as soon as possible </p>
+{% endblock %}

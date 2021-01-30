@@ -1,0 +1,17 @@
+{% extends "covid19callcenter/layout.html" %}
+
+{% block body %}
+    <h2>Did the patient interact with any suspected positive case? </h2>
+
+    <form action = "interact" method="POST">
+        {% csrf_token %}
+        <input type = "radio" name = "yes" value = "yes">
+        <label for = "yes"> Yes </label>
+
+        <input type = "radio" name = "no" value = "no">
+        <label for = "no"> No </label> <br>
+
+        <input type = "submit" >
+    </form>
+        
+{% endblock %}
